@@ -40,9 +40,9 @@ def onSubmit():
 
     l = rl.ReinforcementLearner(numLong=float(numLong),numShort=float(numShort))
     symbol = symbol
-    sd = dt.datetime(2015, 1, 1)
-    # train_start_date = dt.datetime.strptime(start_date, "%Y-%m-%d")
-    train_start_date = sd
+    # sd = dt.datetime(2015, 1, 1)
+    train_start_date = dt.datetime.strptime(start_date, "%Y-%m-%d")
+    # train_start_date = sd
     train_end_date = dt.datetime.strptime(end_date,"%Y-%m-%d")
 
     l.addEvidence(symbol, train_start_date, train_end_date)
